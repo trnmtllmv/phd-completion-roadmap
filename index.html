@@ -419,6 +419,19 @@ h1, h2, h3, h4 {
   background: var(--card-bg);
   border-color: var(--line-strong);
 }
+.chain-node strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--text-main);
+  font-size: 0.82rem;
+  line-height: 1.28;
+}
+.chain-node small {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.74rem;
+  line-height: 1.35;
+}
 
 .chain-node:not(:last-child)::after {
   content: "";
@@ -1282,10 +1295,10 @@ footer {
           <details class="mobile-chain">
             <summary>Evidence chain</summary>
             <div class="chain-grid">
-              <div class="chain-node"><span class="chain-icon">1</span><span>Microbial capability</span></div>
-              <div class="chain-node"><span class="chain-icon">2</span><span>Oil-microbe access</span></div>
-              <div class="chain-node"><span class="chain-icon">3</span><span>Column interpretation</span></div>
-              <div class="chain-node"><span class="chain-icon">4</span><span>Field-scale decision support</span></div>
+              <div class="chain-node"><span class="chain-icon">1</span><span><strong>Chapters 3&ndash;4</strong><small>Microbial capability</small></span></div>
+              <div class="chain-node"><span class="chain-icon">2</span><span><strong>Chapters 5&ndash;6</strong><small>Oil&ndash;microbe access</small></span></div>
+              <div class="chain-node"><span class="chain-icon">3</span><span><strong>Chapters 7&ndash;8</strong><small>Column interpretation</small></span></div>
+              <div class="chain-node"><span class="chain-icon">4</span><span><strong>Chapter 9</strong><small>Field-scale decision support</small></span></div>
             </div>
           </details>
           <details class="mobile-privacy">
@@ -1299,10 +1312,10 @@ footer {
           <section class="evidence-chain" aria-label="Multi-scale evidence chain">
             <h2>Evidence chain</h2>
             <div class="chain-grid">
-              <div class="chain-node"><span class="chain-icon">1</span><span>Microbial capability</span></div>
-              <div class="chain-node"><span class="chain-icon">2</span><span>Oil-microbe access</span></div>
-              <div class="chain-node"><span class="chain-icon">3</span><span>Column interpretation</span></div>
-              <div class="chain-node"><span class="chain-icon">4</span><span>Field-scale decision support</span></div>
+              <div class="chain-node"><span class="chain-icon">1</span><span><strong>Chapters 3&ndash;4</strong><small>Microbial capability</small></span></div>
+              <div class="chain-node"><span class="chain-icon">2</span><span><strong>Chapters 5&ndash;6</strong><small>Oil&ndash;microbe access</small></span></div>
+              <div class="chain-node"><span class="chain-icon">3</span><span><strong>Chapters 7&ndash;8</strong><small>Column interpretation</small></span></div>
+              <div class="chain-node"><span class="chain-icon">4</span><span><strong>Chapter 9</strong><small>Field-scale decision support</small></span></div>
             </div>
           </section>
           <aside class="sidebar-privacy" aria-label="Public-safe summary note">
