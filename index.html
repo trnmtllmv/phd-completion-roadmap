@@ -1,0 +1,1748 @@
+<!doctype html>
+<html lang="en-GB" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PhD Completion and Research Roadmap | Turan Mutallimov</title>
+  <meta name="description" content="Supervisor-facing roadmap for thesis completion, publication plan and thesis story.">
+  <meta name="author" content="Turan Mutallimov">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="PhD Completion and Research Roadmap | Turan Mutallimov">
+  <meta property="og:description" content="Supervisor-facing roadmap for thesis completion, publication plan and thesis story.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0C1B2E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap">
+
+  <style>
+/* ─── Design tokens ────────────────────────────────────────────────────────── */
+:root {
+  --bg-base:    #E7E3DA;
+  --bg-canvas:  #F0EDE7;
+
+  --hero-bg:
+    radial-gradient(ellipse 80% 55% at 88% 8%,  rgba(18,210,192,0.16), transparent),
+    radial-gradient(ellipse 60% 70% at 6%  96%,  rgba(172,116,8,0.17), transparent),
+    radial-gradient(ellipse 45% 45% at 50% 50%,  rgba(56,80,106,0.07), transparent),
+    linear-gradient(158deg, #050C18 0%, #0A1B34 52%, #050C18 100%);
+
+  --text-main:  #0C1B2E;
+  --text-muted: #546474;
+  --text-accent: #0A7571;
+
+  --card-bg:     #FDFCF8;
+  --card-border: rgba(12,27,46,0.09);
+  --card-shadow: 0 1px 3px rgba(12,27,46,0.05), 0 1px 2px rgba(12,27,46,0.03);
+  --card-hover-shadow: 0 8px 32px rgba(12,27,46,0.09), 0 3px 10px rgba(12,27,46,0.05);
+
+  --teal:       #0A7571;
+  --teal-soft:  #C8EEE9;
+  --amber:      #9A6E08;
+  --amber-soft: #FEF0CB;
+  --sand:       #DBD6CC;
+  --sand-deep:  #B0A898;
+  --slate:      #3C5470;
+  --coral:      #B81C38;
+  --indigo:     #3838B0;
+  --line:       #CECAC0;
+  --line-strong: #A6A19A;
+
+  --tint-teal:    rgba(10,117,113,0.07);
+  --tint-amber:   rgba(154,110,8,0.07);
+  --tint-slate:   rgba(60,84,112,0.07);
+  --amber-border: rgba(154,110,8,0.36);
+
+  --radius-sm: 4px;
+  --radius:    8px;
+  --radius-lg: 12px;
+  --max-width: 1200px;
+  --focus:     0 0 0 3px rgba(10,117,113,0.30);
+
+  --font-sans:  'Inter', Arial, Helvetica, sans-serif;
+  --font-serif: 'DM Serif Display', Georgia, serif;
+  --font-mono:  'Space Mono', 'Courier New', monospace;
+}
+
+[data-theme="dark"] {
+  --bg-base:    #040A14;
+  --bg-canvas:  #07101E;
+
+  --hero-bg:
+    radial-gradient(ellipse 80% 55% at 88% 8%,  rgba(18,210,192,0.08), transparent),
+    radial-gradient(ellipse 60% 70% at 6%  96%,  rgba(172,116,8,0.10), transparent),
+    radial-gradient(ellipse 45% 45% at 50% 50%,  rgba(56,80,106,0.06), transparent),
+    linear-gradient(158deg, #020709 0%, #07121E 52%, #020709 100%);
+
+  --text-main:  #E8E4DB;
+  --text-muted: #7A94B0;
+  --text-accent: #14ACA0;
+
+  --card-bg:     #0B1826;
+  --card-border: rgba(255,255,255,0.07);
+  --card-shadow: 0 2px 12px rgba(0,0,0,0.35), 0 1px 4px rgba(0,0,0,0.20);
+  --card-hover-shadow: 0 10px 40px rgba(0,0,0,0.55), 0 4px 14px rgba(0,0,0,0.30);
+
+  --teal:       #14ACA0;
+  --teal-soft:  rgba(20,172,160,0.14);
+  --amber:      #C28810;
+  --amber-soft: rgba(194,136,16,0.14);
+  --sand:       #111C2C;
+  --sand-deep:  #1B2E44;
+  --slate:      #6688A8;
+  --coral:      #E02050;
+  --indigo:     #5050D8;
+  --line:       #152236;
+  --line-strong: #213A56;
+  --tint-teal:    rgba(20,172,160,0.09);
+  --tint-amber:   rgba(194,136,16,0.09);
+  --tint-slate:   rgba(102,136,168,0.09);
+  --amber-border: rgba(194,136,16,0.32);
+}
+
+/* ─── Reset & base ──────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.70;
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible { outline: none; box-shadow: var(--focus); border-radius: 4px; }
+
+a { color: var(--text-accent); text-decoration: none; transition: opacity 0.2s; }
+a:hover { opacity: 0.76; }
+em { font-style: italic; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--text-main);
+  letter-spacing: -0.015em;
+}
+
+#bg-canvas {
+  position: fixed; top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: -1; pointer-events: none; opacity: 0.18;
+}
+
+.page-shell { min-height: 100vh; }
+.wrap { width: min(var(--max-width), calc(100% - 44px)); margin-inline: auto; }
+
+/* ─── Skip link ─────────────────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute; top: 12px; left: 12px; z-index: 30;
+  transform: translateY(-160%); padding: 10px 14px;
+  border-radius: 8px; background: var(--text-main); color: var(--bg-canvas);
+  font-weight: 700; transition: transform 0.2s;
+}
+.skip-link:focus { transform: translateY(0); outline: none; box-shadow: var(--focus); }
+
+/* ─── Theme toggle ──────────────────────────────────────────────────────────── */
+.theme-toggle {
+  position: fixed; top: 24px; right: 32px; z-index: 100;
+  background: var(--card-bg); border: 1px solid var(--line);
+  border-radius: 999px; padding: 8px 18px;
+  color: var(--text-main); font-family: var(--font-sans);
+  font-size: 0.80rem; font-weight: 600; letter-spacing: 0.04em;
+  cursor: pointer; transition: all 0.25s;
+  box-shadow: var(--card-shadow);
+  display: flex; align-items: center; gap: 7px;
+}
+.theme-toggle:hover {
+  border-color: var(--line-strong);
+  box-shadow: var(--card-hover-shadow);
+}
+.theme-toggle::before {
+  content: '◐';
+  font-size: 0.78rem;
+  display: inline-block;
+  transition: transform 0.4s;
+}
+[data-theme="dark"] .theme-toggle::before { transform: rotate(180deg); }
+
+/* ─── Hero ──────────────────────────────────────────────────────────────────── */
+.hero {
+  position: relative; overflow: hidden;
+  background: var(--hero-bg); color: #fff;
+  padding: 96px 0 80px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+/* Grid overlay */
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,0.6), transparent 80%);
+  pointer-events: none; z-index: 1;
+}
+
+/* Bottom fade blending hero into page bg */
+.hero::after {
+  content: "";
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, rgba(5,12,24,0.12));
+  pointer-events: none; z-index: 1;
+}
+
+/* Sand strata SVG */
+.hero-strata {
+  position: absolute; right: -12px; top: 0;
+  height: 100%; width: 58%;
+  pointer-events: none; z-index: 1; opacity: 0.85;
+}
+
+.hero-grid {
+  position: relative; z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 52px;
+  align-items: center;
+}
+
+.hero-main { display: grid; align-content: center; gap: 0; }
+
+.eyebrow {
+  margin-bottom: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.70rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.50);
+  display: flex; align-items: center; gap: 10px;
+}
+.eyebrow::before {
+  content: '';
+  display: inline-block; width: 28px; height: 1px;
+  background: rgba(255,255,255,0.30);
+  flex-shrink: 0;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: clamp(1.7rem, 3vw, 2.85rem);
+  letter-spacing: -0.02em;
+  line-height: 1.17;
+}
+
+.hero-title {
+  margin-top: 22px;
+  color: rgba(255,255,255,0.82);
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 1.5vw, 1.18rem);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.research-identity {
+  margin-top: 12px;
+  color: rgba(255,255,255,0.62);
+  font-size: 0.92rem;
+  line-height: 1.62;
+  font-weight: 300;
+}
+
+.hero-note {
+  margin-top: 18px;
+  color: rgba(255,255,255,0.50);
+  font-size: 0.84rem;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+/* Chips */
+.chip-row {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-top: 28px;
+}
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 14px 5px 10px;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.88);
+  font-family: var(--font-sans);
+  font-size: 0.79rem; font-weight: 500;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s, border-color 0.2s;
+}
+.chip:hover { background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.24); }
+
+/* Colored dots on chips — hardcoded bright values for the always-dark hero */
+.chip::before {
+  content: '';
+  display: inline-block;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #18CCC0;
+  flex-shrink: 0;
+  opacity: 1;
+}
+.chip:nth-child(2)::before { background: #D89C14; }
+.chip:nth-child(3)::before { background: rgba(255,255,255,0.38); }
+.chip:nth-child(4)::before { background: rgba(255,255,255,0.22); }
+
+/* Status strip — instrument panel */
+.hero-status-strip {
+  display: grid; grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 1px; margin-top: 30px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.06);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.28), 0 2px 8px rgba(0,0,0,0.15);
+}
+.hero-status-strip span {
+  display: grid; gap: 4px; padding: 15px 16px;
+  background: rgba(0,0,0,0.20);
+  font-family: var(--font-mono);
+  font-size: 0.64rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: rgba(255,255,255,0.50);
+  position: relative;
+}
+.hero-status-strip span::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px;
+}
+.hero-status-strip span:nth-child(1)::before { background: rgba(20,200,188,0.80); }
+.hero-status-strip span:nth-child(2)::before { background: rgba(194,138,18,0.80); }
+.hero-status-strip span:nth-child(3)::before { background: rgba(86,110,140,0.70); }
+.hero-status-strip span:nth-child(4)::before { background: rgba(255,255,255,0.20); }
+.hero-status-strip strong {
+  display: block; color: rgba(255,255,255,0.92);
+  font-family: var(--font-serif);
+  font-size: 1.02rem; font-weight: 400;
+  text-transform: none; letter-spacing: -0.01em;
+}
+
+/* ─── Evidence chain (hero sidebar) ────────────────────────────────────────── */
+.control-panel { display: grid; gap: 16px; }
+
+.evidence-chain {
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: var(--radius-lg);
+  background: rgba(0,0,0,0.24);
+  box-shadow: 0 24px 56px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.07);
+  padding: 24px;
+  backdrop-filter: blur(8px);
+}
+.evidence-chain h2 {
+  color: rgba(255,255,255,0.90);
+  font-family: var(--font-serif);
+  font-size: 1.1rem; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 10px;
+}
+.evidence-chain h2::before {
+  content: '';
+  display: inline-block; width: 4px; height: 18px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #14C8BC, #C28810);
+  flex-shrink: 0;
+}
+
+.chain-grid { display: grid; gap: 10px; }
+
+.chain-node {
+  position: relative; display: flex;
+  align-items: flex-start; gap: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.035);
+  color: rgba(255,255,255,0.82);
+  font-family: var(--font-sans);
+  font-size: 0.84rem; font-weight: 400;
+  line-height: 1.48;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s;
+  cursor: default;
+}
+.chain-node:hover {
+  transform: translateX(4px);
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.14);
+}
+
+.chain-node:not(:last-child)::after {
+  content: "";
+  position: absolute; left: 32px; bottom: -11px;
+  width: 2px; height: 10px;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(20,200,188,0.6) 0px, rgba(20,200,188,0.6) 3px,
+    transparent 3px, transparent 6px
+  );
+  z-index: 1;
+}
+
+.chain-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; flex-shrink: 0;
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 0.70rem; font-weight: 700;
+}
+.chain-node:nth-child(1) .chain-icon { background: rgba(20,200,188,0.88); color: #06121e; }
+.chain-node:nth-child(2) .chain-icon { background: rgba(210,148,14,0.90); color: #1a0e00; }
+.chain-node:nth-child(3) .chain-icon { background: rgba(140,162,188,0.72); color: #fff; }
+.chain-node:nth-child(4) .chain-icon { background: rgba(100,100,220,0.72); color: #fff; }
+
+/* Privacy note in desktop sidebar */
+.sidebar-privacy {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.03);
+  padding: 14px 16px;
+}
+.sidebar-privacy p {
+  color: rgba(255,255,255,0.52);
+  font-size: 0.80rem;
+  line-height: 1.55;
+  font-family: var(--font-sans);
+  font-weight: 300;
+}
+.sidebar-privacy::before {
+  content: 'PUBLIC-SAFE SUMMARY';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.61rem; font-weight: 700;
+  letter-spacing: 0.10em;
+  color: rgba(255,255,255,0.32);
+  margin-bottom: 8px;
+}
+
+/* Mobile evidence chain + privacy note */
+.mobile-chain, .mobile-privacy { display: none; }
+
+.mobile-chain {
+  margin-top: 22px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius);
+  background: rgba(0,0,0,0.18);
+}
+.mobile-privacy {
+  margin-top: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.04);
+}
+.mobile-chain summary, .mobile-privacy summary {
+  cursor: pointer; padding: 13px 16px;
+  color: rgba(255,255,255,0.90); font-weight: 600; font-size: 0.88rem;
+}
+.mobile-chain .chain-grid { padding: 0 16px 16px; }
+.mobile-privacy p { padding: 0 16px 16px; color: rgba(255,255,255,0.72); font-size: 0.86rem; }
+
+/* ─── Strata divider (signature element) ────────────────────────────────────── */
+/*
+  A multi-colour horizontal band evoking geological strata cross-sections
+  — the visual motif of the research subject.
+*/
+.strata-divider {
+  display: flex; align-items: stretch; gap: 3px;
+  height: 4px;
+  margin: 52px 0 56px;
+  opacity: 0.48;
+}
+.strata-divider > span {
+  display: block; border-radius: 2px;
+}
+.strata-divider > span:nth-child(1) { flex: 4;   background: #0EA89F; }
+.strata-divider > span:nth-child(2) { flex: 2.5; background: #C28910; }
+.strata-divider > span:nth-child(3) { flex: 5.5; background: #8898A8; }
+.strata-divider > span:nth-child(4) { flex: 1.5; background: #6478A0; }
+.strata-divider > span:nth-child(5) { flex: 2;   background: #C02040; }
+.strata-divider > span:nth-child(6) { flex: 3;   background: #5055C8; }
+
+/* ─── Tab navigation ────────────────────────────────────────────────────────── */
+.tab-sticky {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--bg-canvas);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 2px 12px rgba(12,27,46,0.05);
+  transition: background-color 0.4s ease;
+}
+.tabs {
+  position: relative;
+  display: flex; gap: 0;
+  padding: 0;
+}
+
+/* Sliding teal indicator — animated under the active tab */
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: var(--teal);
+  border-radius: 2px 2px 0 0;
+  transition: left 0.30s cubic-bezier(0.4, 0, 0.2, 1),
+              width 0.30s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.tab-button {
+  appearance: none;
+  border: none; border-bottom: none;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.86rem; font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 19px 24px 17px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.tab-button:hover { color: var(--text-main); }
+.tab-button[aria-selected="true"] {
+  color: var(--text-main);
+}
+
+/* ─── Main content area ─────────────────────────────────────────────────────── */
+main { padding: 60px 0 112px; }
+
+.tab-panel { display: none; }
+.tab-panel.is-active {
+  display: block;
+  animation: fadeUp 0.24s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Section heading ───────────────────────────────────────────────────────── */
+.panel-kicker {
+  display: inline-flex; align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--teal-soft);
+  color: var(--text-accent);
+  font-family: var(--font-mono);
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.09em; text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.section-heading { margin-bottom: 40px; }
+.section-heading h2 { font-size: 2.05rem; margin-bottom: 12px; }
+.section-heading p { color: var(--text-muted); font-size: 1.02rem; max-width: 760px; line-height: 1.65; }
+
+/* Section h3 headings inside content sections */
+.content-section > h3 {
+  font-size: 1.85rem; margin-bottom: 24px;
+  position: relative;
+  padding-left: 20px;
+}
+.content-section > h3::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 4px; bottom: 4px;
+  width: 4px;
+  background: linear-gradient(180deg, var(--teal), var(--amber));
+  border-radius: 2px;
+}
+
+/* ─── Card base ─────────────────────────────────────────────────────────────── */
+.card {
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.22s, box-shadow 0.22s, transform 0.22s;
+}
+.milestone:hover,
+.paper-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-hover-shadow);
+  border-color: var(--line-strong);
+}
+
+/* ─── Notice ────────────────────────────────────────────────────────────────── */
+.notice {
+  display: flex; gap: 16px; align-items: flex-start;
+  margin-top: 32px; padding: 18px 22px;
+  border: 1px solid var(--amber-border);
+  border-radius: var(--radius);
+  background: var(--amber-soft);
+  color: var(--text-main);
+}
+.notice-icon {
+  display: flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--amber); color: #fff;
+  font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700;
+}
+
+/* ─── Timeline ──────────────────────────────────────────────────────────────── */
+.timeline {
+  position: relative;
+  display: grid; grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 22px; margin-top: 40px;
+}
+.timeline::before {
+  content: "";
+  position: absolute; top: 22px;
+  left: calc(12.5% + 28px); right: calc(12.5% + 28px);
+  height: 1px;
+  background: linear-gradient(90deg, var(--teal), var(--amber), var(--sand-deep), var(--text-muted));
+  z-index: 0;
+  opacity: 0.5;
+}
+.milestone {
+  position: relative;
+  padding: 60px 22px 24px;
+  z-index: 1;
+}
+.milestone-marker {
+  position: absolute; top: 8px; left: 22px;
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--teal); color: #fff;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 700;
+  box-shadow: 0 0 0 5px var(--bg-canvas);
+  z-index: 2;
+  transition: box-shadow 0.3s;
+}
+/* Pulse glow on the current milestone */
+.milestone:has(.status-current) .milestone-marker {
+  animation: milestoneGlow 2.6s ease-in-out infinite;
+}
+@keyframes milestoneGlow {
+  0%,  100% { box-shadow: 0 0 0 5px var(--bg-canvas), 0 0 0 8px rgba(10,117,113,0.28); }
+  50%       { box-shadow: 0 0 0 5px var(--bg-canvas), 0 0 0 14px rgba(10,117,113,0.44), 0 0 22px rgba(10,117,113,0.18); }
+}
+[data-theme="dark"] .milestone:has(.status-current) .milestone-marker {
+  animation: milestoneGlowDark 2.6s ease-in-out infinite;
+}
+@keyframes milestoneGlowDark {
+  0%,  100% { box-shadow: 0 0 0 5px var(--bg-canvas), 0 0 0 8px rgba(20,172,160,0.32); }
+  50%       { box-shadow: 0 0 0 5px var(--bg-canvas), 0 0 0 14px rgba(20,172,160,0.52), 0 0 26px rgba(20,172,160,0.22); }
+}
+.milestone:nth-child(2) .milestone-marker { background: var(--amber); }
+.milestone:nth-child(3) .milestone-marker { background: var(--sand-deep); color: var(--text-main); }
+.milestone:nth-child(4) .milestone-marker { background: var(--text-main); color: var(--bg-canvas); }
+
+.milestone h3 { font-size: 1.12rem; margin-bottom: 10px; }
+
+.status-badge {
+  display: inline-flex; align-items: center;
+  padding: 4px 12px; border-radius: 999px;
+  font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.07em;
+  margin-top: 14px;
+}
+.status-current  { background: var(--teal-soft);             color: var(--text-accent); }
+.status-next     { background: var(--amber-soft);             color: var(--amber); }
+.status-planned  { background: rgba(56,58,178,0.10);          color: var(--indigo); }
+.status-target   { background: rgba(148,163,184,0.14);        color: var(--text-muted); }
+
+/* ─── Progress strip ────────────────────────────────────────────────────────── */
+.progress-card {
+  display: grid; grid-template-columns: repeat(4, minmax(0,1fr));
+  margin-top: 36px; overflow: hidden;
+}
+.progress-item {
+  padding: 22px 22px 24px;
+  border-right: 1px solid var(--card-border);
+  position: relative;
+}
+.progress-item:last-child { border-right: none; }
+.progress-item::before {
+  content: '';
+  display: block; width: 32px; height: 3px; border-radius: 2px;
+  margin-bottom: 14px;
+}
+.progress-item:nth-child(1)::before { background: var(--teal); }
+.progress-item:nth-child(2)::before { background: var(--amber); }
+.progress-item:nth-child(3)::before { background: var(--coral); }
+.progress-item:nth-child(4)::before { background: var(--slate); }
+.progress-item span {
+  display: block; margin-bottom: 7px;
+  font-family: var(--font-mono);
+  font-size: 0.66rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.09em;
+  color: var(--text-accent);
+}
+.progress-item p { font-size: 0.90rem; color: var(--text-muted); line-height: 1.55; }
+
+/* ─── Paper grid ────────────────────────────────────────────────────────────── */
+.paper-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 24px; margin-top: 40px;
+}
+.paper-card {
+  padding: 28px 30px;
+  position: relative; overflow: hidden;
+  border-top: 3px solid var(--teal);
+}
+.paper-card:nth-child(2) { border-top-color: var(--amber); }
+.paper-card:nth-child(3) { border-top-color: var(--slate); }
+.paper-card:nth-child(4) { border-top-color: var(--coral); }
+
+/* Ghost paper number */
+.paper-card::after {
+  content: attr(data-paper);
+  position: absolute; right: 20px; top: 6px;
+  font-family: var(--font-mono); font-size: 5.5rem;
+  line-height: 1; color: var(--text-main);
+  opacity: 0.028; pointer-events: none; user-select: none;
+}
+
+.paper-head {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; gap: 16px; margin-bottom: 22px;
+}
+.paper-head h3 {
+  font-size: 1.15rem; line-height: 1.32;
+}
+
+.paper-meta { display: grid; gap: 10px; }
+.paper-meta div {
+  display: grid; grid-template-columns: 110px 1fr; gap: 12px;
+}
+.paper-meta dt {
+  font-family: var(--font-mono);
+  font-size: 0.66rem; font-weight: 700;
+  color: var(--text-accent); text-transform: uppercase; letter-spacing: 0.07em;
+  padding-top: 2px;
+}
+.paper-meta dd { font-size: 0.88rem; color: var(--text-muted); }
+
+.evidence-badge {
+  display: inline-flex; padding: 3px 10px;
+  border-radius: 999px; font-size: 0.70rem; font-weight: 600;
+  margin: 14px 5px 0 0;
+  background: rgba(10,117,113,0.10); color: var(--teal);
+}
+.evidence-badge.interpreted { background: var(--amber-soft); color: var(--amber); }
+.evidence-badge.scenario    { background: rgba(56,80,106,0.10); color: var(--text-muted); }
+
+/* ─── Publication pipeline ──────────────────────────────────────────────────── */
+.pipeline { margin-top: 40px; padding: 28px 30px; }
+.pipeline h3 { margin-bottom: 24px; font-size: 1.22rem; }
+.pipeline-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 16px;
+  position: relative;
+}
+/* Subtle connector line behind steps */
+.pipeline-grid::before {
+  content: '';
+  position: absolute;
+  top: 24px; left: 28px; right: 28px; height: 1px;
+  background: linear-gradient(90deg,
+    var(--teal), var(--amber), var(--slate), var(--coral));
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+.pipe-step {
+  padding: 20px 18px; border: 1px solid var(--card-border);
+  border-radius: var(--radius); background: var(--bg-canvas);
+  position: relative; z-index: 1;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.pipe-step:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--card-hover-shadow);
+}
+.pipe-step::before {
+  content: ""; display: block;
+  width: 36px; height: 3px; border-radius: 2px;
+  background: var(--teal); margin-bottom: 14px;
+}
+.pipe-step[data-p="2"]::before { background: var(--amber); }
+.pipe-step[data-p="3"]::before { background: var(--slate); }
+.pipe-step[data-p="4"]::before { background: var(--coral); }
+.pipe-step span { display: block; font-family: var(--font-mono); font-size: 0.67rem; color: var(--text-muted); margin-bottom: 5px; letter-spacing: 0.04em; }
+.pipe-step strong { display: block; font-size: 1rem; font-family: var(--font-serif); color: var(--text-main); margin-bottom: 4px; }
+.pipe-step small { font-size: 0.76rem; color: var(--text-muted); }
+
+/* ─── Story blocks ──────────────────────────────────────────────────────────── */
+.story-block { padding: 30px 32px; margin-top: 28px; }
+.story-block h3 {
+  font-size: 1.28rem; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.story-message { border-left: 4px solid var(--teal); }
+.story-problem  { border-left: 4px solid var(--amber); }
+.story-message h3::before { content: ''; display: block; width: 8px; height: 8px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
+.story-problem  h3::before { content: ''; display: block; width: 8px; height: 8px; border-radius: 50%; background: var(--amber); flex-shrink: 0; }
+
+/* ─── Chapter flow ──────────────────────────────────────────────────────────── */
+.content-section { margin-top: 60px; }
+
+.chapter-flow {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 20px; margin-top: 28px;
+  counter-reset: chapter 1;
+}
+.chapter-card {
+  padding: 24px;
+  border-top: 3px solid var(--teal);
+  counter-increment: chapter;
+}
+.chapter-card:nth-child(3n+2) { border-top-color: var(--amber); }
+.chapter-card:nth-child(3n)   { border-top-color: var(--sand-deep); }
+
+/* Monospace chapter label */
+.chapter-card::before {
+  content: "CH. " counter(chapter);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.64rem; font-weight: 700;
+  letter-spacing: 0.10em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 11px;
+}
+.chapter-card h4 { font-size: 1.02rem; margin-bottom: 9px; }
+.chapter-card p  { font-size: 0.88rem; color: var(--text-muted); line-height: 1.58; }
+
+/* Chapter highlight controls load the local PDF only when requested. */
+.chapter-highlight-button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  min-height: 38px;
+  margin-top: 18px;
+  padding: 9px 13px;
+  border: 0.5px solid rgba(10,117,113,0.34);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--teal-soft) 62%, var(--card-bg));
+  color: var(--text-accent);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+.chapter-highlight-button::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 0 4px rgba(10,117,113,0.12);
+}
+.chapter-highlight-button:hover {
+  transform: translateY(-1px);
+  border-color: var(--teal);
+  box-shadow: 0 8px 20px rgba(10,117,113,0.13);
+}
+
+/* ─── Novelty cards ─────────────────────────────────────────────────────────── */
+.novelty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  counter-reset: novelty;
+}
+.novelty-card {
+  padding: 24px 22px 24px 26px;
+  counter-increment: novelty;
+  border-left: 4px solid var(--teal);
+}
+.novelty-card:nth-child(1) { border-left-color: var(--teal); }
+.novelty-card:nth-child(2) { border-left-color: var(--amber); }
+.novelty-card:nth-child(3) { border-left-color: var(--slate); }
+.novelty-card:nth-child(4) { border-left-color: var(--coral); }
+.novelty-card:nth-child(5) { border-left-color: var(--indigo); }
+
+.novelty-card::before {
+  content: "0" counter(novelty);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem; font-weight: 700;
+  color: var(--text-accent); letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+.novelty-card:nth-child(2)::before { color: var(--amber); }
+.novelty-card:nth-child(3)::before { color: var(--slate); }
+.novelty-card:nth-child(4)::before { color: var(--coral); }
+.novelty-card:nth-child(5)::before { color: var(--indigo); }
+
+.novelty-card h4 { font-size: 1.02rem; margin-bottom: 10px; }
+.novelty-card p  { font-size: 0.88rem; color: var(--text-muted); line-height: 1.58; }
+
+/* ─── Evidence discipline ───────────────────────────────────────────────────── */
+.evidence-row {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+.evidence-tag { padding: 24px; }
+.evidence-tag::before {
+  content: ""; display: block;
+  width: 36px; height: 3px; border-radius: 2px;
+  background: var(--teal); margin-bottom: 16px;
+}
+.evidence-tag:nth-child(1) { background: var(--tint-teal); }
+.evidence-tag:nth-child(2) { background: var(--tint-amber); }
+.evidence-tag:nth-child(3) { background: var(--tint-slate); }
+.evidence-tag:nth-child(2)::before { background: var(--amber); }
+.evidence-tag:nth-child(3)::before { background: var(--slate); }
+.evidence-tag strong {
+  display: block; font-size: 1rem; margin-bottom: 8px;
+  font-family: var(--font-serif); font-weight: 400;
+  color: var(--text-main);
+}
+.evidence-tag p { font-size: 0.88rem; color: var(--text-muted); }
+
+/* ─── Back to top ───────────────────────────────────────────────────────────── */
+.back-to-top {
+  position: fixed; right: 32px; bottom: 32px;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--text-main); color: var(--bg-canvas);
+  border: none; cursor: pointer;
+  font-family: var(--font-mono); font-size: 1rem;
+  z-index: 50; opacity: 0; pointer-events: none;
+  transform: translateY(16px);
+  transition: all 0.30s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+}
+.back-to-top.is-visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.back-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+}
+
+/* ─── Chapter highlight modal ───────────────────────────────────────────────── */
+body.modal-open { overflow: hidden; }
+
+.highlight-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(4,10,20,0.76);
+}
+.highlight-modal.is-open { display: flex; }
+
+.highlight-modal__dialog {
+  display: grid;
+  grid-template-rows: auto minmax(0,1fr);
+  width: min(1120px, calc(100vw - 36px));
+  height: min(820px, calc(100vh - 36px));
+  overflow: hidden;
+  border: 0.5px solid rgba(255,255,255,0.22);
+  border-radius: var(--radius-lg);
+  background: var(--card-bg);
+  box-shadow: 0 24px 80px rgba(0,0,0,0.42);
+}
+
+.highlight-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--card-border);
+  background: var(--bg-canvas);
+}
+.highlight-modal__label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text-accent);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+.highlight-modal__header h2 {
+  font-size: 1.22rem;
+  letter-spacing: 0;
+}
+.highlight-modal__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.highlight-modal__link,
+.highlight-modal__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 9px 13px;
+  border: 0.5px solid var(--card-border);
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--text-main);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.highlight-modal__close {
+  min-width: 38px;
+  padding-inline: 12px;
+}
+.highlight-modal__frame {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: white;
+}
+.highlight-modal__fallback {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* ─── Footer ────────────────────────────────────────────────────────────────── */
+footer {
+  padding: 40px 0 48px;
+  border-top: 1px solid var(--line);
+}
+.footer-inner {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  gap: 32px; flex-wrap: wrap;
+}
+.footer-note {
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  line-height: 1.62;
+  max-width: 680px;
+}
+.footer-strata {
+  display: flex; gap: 2px; height: 20px; align-items: flex-end;
+  flex-shrink: 0;
+}
+.footer-strata > span {
+  display: block; border-radius: 2px; width: 5px;
+  opacity: 0.35;
+}
+.footer-strata > span:nth-child(1) { height: 20px; background: #0EA89F; }
+.footer-strata > span:nth-child(2) { height: 14px; background: #C28910; }
+.footer-strata > span:nth-child(3) { height: 18px; background: #8898A8; }
+.footer-strata > span:nth-child(4) { height: 10px; background: #6478A0; }
+.footer-strata > span:nth-child(5) { height: 15px; background: #C02040; }
+
+/* ─── Reveal animations ─────────────────────────────────────────────────────── */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.72s cubic-bezier(0.4,0,0.2,1), transform 0.72s cubic-bezier(0.4,0,0.2,1); }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* ─── Responsive ────────────────────────────────────────────────────────────── */
+@media (max-width: 1040px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .control-panel { grid-template-columns: 1fr 1fr; }
+  .timeline { grid-template-columns: 1fr 1fr; }
+  .timeline::before { display: none; }
+  .progress-card { grid-template-columns: 1fr 1fr; }
+  .progress-item:nth-child(1),
+  .progress-item:nth-child(2) { border-bottom: 1px solid var(--card-border); }
+  .progress-item:nth-child(2) { border-right: none; }
+  .pipeline-grid { grid-template-columns: 1fr 1fr; }
+  .chapter-flow  { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 64px 0 44px; }
+  .hero h1 { font-size: 1.85rem; }
+  .control-panel { display: none; }
+  .mobile-chain, .mobile-privacy { display: block; }
+  .hero-status-strip {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    margin-top: 22px;
+  }
+  .hero-status-strip span { padding: 12px 13px; font-size: 0.60rem; }
+  .hero-status-strip strong { font-size: 0.92rem; }
+  .tabs {
+    flex-wrap: nowrap; overflow-x: auto; gap: 0;
+    scrollbar-width: none;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab-button { flex: 0 0 auto; white-space: nowrap; padding: 17px 18px 15px; }
+  .timeline, .paper-grid, .progress-card,
+  .pipeline-grid, .chapter-flow, .evidence-row { grid-template-columns: 1fr; }
+  .progress-item { border-right: none; border-bottom: 1px solid var(--card-border); }
+  .progress-item:last-child { border-bottom: none; }
+  .milestone { padding-top: 26px; padding-left: 68px; }
+  .milestone-marker { top: 24px; left: 18px; }
+  .hero-strata { display: none; }
+  .theme-toggle { top: 12px; right: 12px; }
+  .novelty-grid { grid-template-columns: 1fr; }
+  .strata-divider { margin: 36px 0 40px; }
+  .pipeline-grid::before { display: none; }
+  .highlight-modal { padding: 10px; }
+  .highlight-modal__dialog {
+    width: calc(100vw - 20px);
+    height: calc(100dvh - 20px);
+  }
+  .highlight-modal__header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .highlight-modal__actions { width: 100%; justify-content: space-between; }
+  .footer-inner { flex-direction: column; gap: 20px; }
+}
+
+/* ─── Print ─────────────────────────────────────────────────────────────────── */
+@media print {
+  body { background: white; color: black; }
+  .theme-toggle, .back-to-top, .skip-link, .tab-sticky,
+  .chapter-highlight-button, .highlight-modal,
+  #bg-canvas, .hero-status-strip, .control-panel,
+  .mobile-chain, .mobile-privacy, .hero::before, .hero-strata,
+  .strata-divider, .footer-strata { display: none !important; }
+  .hero { background: white; color: black; padding: 0; border-bottom: 1px solid #ccc; }
+  .hero h1, .hero-title, .hero-note, .research-identity { color: black; }
+  .card, .tab-panel { box-shadow: none; }
+  .tab-panel { display: block !important; opacity: 1 !important; height: auto !important; overflow: visible !important; transform: none !important; animation: none !important; }
+}
+
+/* ─── Reduced motion ────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+  </style>
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle colour mode">Dark Mode</button>
+
+  <a class="skip-link" href="#main">Skip to roadmap content</a>
+  <div class="page-shell" id="top">
+
+    <header class="hero">
+      <!-- Signature element: abstract sand-strata cross-section -->
+      <svg class="hero-strata" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"
+           aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+        <!-- layer 1 – shallow teal -->
+        <path d="M0 60 C200 44,450 80,700 56 S860 66 800 60 L800 82 C600 100,340 64,100 88 S-20 76 0 82Z"
+              fill="#14C8BC" opacity="0.13"/>
+        <!-- layer 2 – amber mid -->
+        <path d="M0 162 C220 145,470 182,720 158 S860 170 800 162 L800 185 C580 204,330 168,80 192 S-20 182 0 185Z"
+              fill="#C28810" opacity="0.12"/>
+        <!-- layer 3 – slate -->
+        <path d="M0 272 C240 256,500 292,750 268 S870 280 800 272 L800 290 C560 308,300 272,50 296 S-24 286 0 290Z"
+              fill="#8898A8" opacity="0.08"/>
+        <!-- layer 4 – teal light -->
+        <path d="M0 368 C220 354,480 386,730 364 S850 376 800 368 L800 384 C580 400,320 370,70 390 S-20 380 0 384Z"
+              fill="#14C8BC" opacity="0.06"/>
+        <!-- layer 5 – amber deep -->
+        <path d="M0 450 C260 438,540 460,790 444 L800 462 L800 480 L0 480Z"
+              fill="#C28810" opacity="0.05"/>
+        <!-- subtle vertical lines – core sample marks -->
+        <line x1="640" y1="0" x2="640" y2="500" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <line x1="700" y1="0" x2="700" y2="500" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+        <line x1="760" y1="0" x2="760" y2="500" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+      </svg>
+
+      <div class="wrap hero-grid">
+        <div class="hero-main">
+          <p class="eyebrow">PhD Completion and Research Roadmap</p>
+          <h1>Microbial biodegradation of crude oil in tidally influenced coastal sands through multi-scale experiments and multiphase modelling</h1>
+          <p class="hero-title">Turan Mutallimov<br>School of Engineering, University of Aberdeen</p>
+          <p class="research-identity">Multi-scale experimental and modelling framework for interpreting crude-oil biodegradation evidence from microbial capability to field-scale decision support.</p>
+          <div class="chip-row" aria-label="Current roadmap status">
+            <span class="chip">Supervisor feedback</span>
+            <span class="chip">Intention to submit</span>
+            <span class="chip">July thesis revision</span>
+            <span class="chip">August viva target</span>
+          </div>
+          <div class="hero-status-strip" aria-label="Roadmap control strip">
+            <span>Stage<strong>Feedback &amp; polish</strong></span>
+            <span>Decision<strong>Submit intention</strong></span>
+            <span>Revision<strong>July target</strong></span>
+            <span>Viva<strong>August target</strong></span>
+          </div>
+          <details class="mobile-chain">
+            <summary>Evidence chain</summary>
+            <div class="chain-grid">
+              <div class="chain-node"><span class="chain-icon">1</span><span>Microbial capability and oil chemistry</span></div>
+              <div class="chain-node"><span class="chain-icon">2</span><span>Pore-scale contact and phase redistribution</span></div>
+              <div class="chain-node"><span class="chain-icon">3</span><span>Column endpoints and ADR interpretation</span></div>
+              <div class="chain-node"><span class="chain-icon">4</span><span>Field A decision-support framing</span></div>
+            </div>
+          </details>
+          <details class="mobile-privacy">
+            <summary>Public-safe note</summary>
+            <p>This summary separates completed, submitted, planned and future work. It avoids confidential field data, proprietary operator details, raw monitoring values and sensitive industry partner information.</p>
+          </details>
+          <p class="hero-note">This page summarises the current completion route, paper development plan, and thesis narrative for supervisor discussion.</p>
+        </div>
+
+        <aside class="control-panel" aria-label="Roadmap research control panel">
+          <section class="evidence-chain" aria-label="Multi-scale evidence chain">
+            <h2>Evidence chain</h2>
+            <div class="chain-grid">
+              <div class="chain-node"><span class="chain-icon">1</span><span>Microbial capability and oil chemistry</span></div>
+              <div class="chain-node"><span class="chain-icon">2</span><span>Pore-scale contact and phase redistribution</span></div>
+              <div class="chain-node"><span class="chain-icon">3</span><span>Column endpoints and ADR interpretation</span></div>
+              <div class="chain-node"><span class="chain-icon">4</span><span>Field A decision-support framing</span></div>
+            </div>
+          </section>
+          <aside class="sidebar-privacy" aria-label="Public-safe summary note">
+            <p>This summary separates completed, submitted, planned and future work. It avoids confidential field data, proprietary operator details, raw monitoring values and sensitive industry partner information.</p>
+          </aside>
+        </aside>
+      </div>
+    </header>
+
+    <nav class="tab-sticky" aria-label="Roadmap sections">
+      <div class="wrap">
+        <div class="tabs" role="tablist" aria-label="Roadmap tabs">
+          <span class="tab-indicator" id="tab-indicator" aria-hidden="true"></span>
+          <button class="tab-button" id="tab-graduation" type="button" role="tab" aria-selected="true"  aria-controls="panel-graduation" tabindex="0">Graduation Plan</button>
+          <button class="tab-button" id="tab-papers"    type="button" role="tab" aria-selected="false" aria-controls="panel-papers"    tabindex="-1">Paper Plan</button>
+          <button class="tab-button" id="tab-story"     type="button" role="tab" aria-selected="false" aria-controls="panel-story"     tabindex="-1">Thesis Story</button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main" class="wrap">
+
+      <!-- ── Tab 1: Graduation Plan ── -->
+      <section class="tab-panel is-active" id="panel-graduation" role="tabpanel" aria-labelledby="tab-graduation">
+        <div class="section-heading">
+          <span class="panel-kicker">Completion route</span>
+          <h2>Graduation Plan</h2>
+          <p>A concise route from supervisor feedback to the intended viva period, with dates presented as planning targets rather than fixed outcomes.</p>
+        </div>
+
+        <div class="timeline" aria-label="Graduation milestone timeline">
+          <article class="card milestone">
+            <span class="milestone-marker" aria-hidden="true">1</span>
+            <h3>End of June 2026 &mdash; Supervisor feedback period</h3>
+            <p>Receive and consolidate comments from supervisors and relevant reviewers.</p>
+            <span class="status-badge status-current">Current focus</span>
+          </article>
+          <article class="card milestone">
+            <span class="milestone-marker" aria-hidden="true">2</span>
+            <h3>After approval by all &mdash; Intention to submit</h3>
+            <p>Submit the formal intention-to-submit request to the School once the thesis is approved for progression.</p>
+            <span class="status-badge status-next">Next administrative step</span>
+          </article>
+          <article class="card milestone">
+            <span class="milestone-marker" aria-hidden="true">3</span>
+            <h3>July 2026 &mdash; Thesis revision period</h3>
+            <p>Revise the thesis according to comments received, check consistency across chapters, update figures/tables if needed, and finalise formatting.</p>
+            <span class="status-badge status-planned">Planned revision</span>
+          </article>
+          <article class="card milestone">
+            <span class="milestone-marker" aria-hidden="true">4</span>
+            <h3>August 2026 &mdash; Viva target</h3>
+            <p>Target viva period, subject to school process, examiner availability and approval timeline.</p>
+            <span class="status-badge status-target">Target</span>
+          </article>
+        </div>
+
+        <div class="notice" role="note" aria-label="Planning caution">
+          <span class="notice-icon" aria-hidden="true">!</span>
+          <p>Dates are planning targets and depend on supervisor approval, school process and examiner availability.</p>
+        </div>
+
+        <section class="progress-card card" aria-label="Compact completion progress">
+          <div class="progress-item">
+            <span>Current stage</span>
+            <p>Supervisor feedback and thesis polishing</p>
+          </div>
+          <div class="progress-item">
+            <span>Next decision</span>
+            <p>Approval to proceed with intention to submit</p>
+          </div>
+          <div class="progress-item">
+            <span>Main risk</span>
+            <p>Time required for July revisions</p>
+          </div>
+          <div class="progress-item">
+            <span>Mitigation</span>
+            <p>Prioritise supervisor comments, consistency checks, figure quality and final formatting.</p>
+          </div>
+        </section>
+      </section>
+
+      <!-- ── Tab 2: Paper Plan ── -->
+      <section class="tab-panel" id="panel-papers" role="tabpanel" aria-labelledby="tab-papers" aria-hidden="true">
+        <div class="section-heading">
+          <span class="panel-kicker">Publication route</span>
+          <h2>Paper Plan</h2>
+          <p>The publication plan distinguishes submitted, approval-ready, conceptual and collaborative work. No acceptance, DOI, reviewer outcome or impact-factor claim is implied.</p>
+        </div>
+
+        <div class="paper-grid">
+          <article class="card paper-card" data-paper="01">
+            <div class="paper-head">
+              <h3>Oxygen-assisted removal of selected crude-oil aromatic analytes by <em>Neptunomonas naphthovorans</em> NAG-2N-126: a bench-scale screening study for water and soil pollution remediation</h3>
+              <span class="status-badge status-current">Submitted</span>
+            </div>
+            <dl class="paper-meta">
+              <div><dt>Journal/status</dt><dd>Submitted to Journal of Water, Air, &amp; Soil Pollution on 9 June 2026</dd></div>
+              <div><dt>Thesis basis</dt><dd>Based on Chapters 3 and 4</dd></div>
+              <div><dt>Focus</dt><dd>Crude oil characterisation, hydrocarbon marker behaviour, strain-specific batch biodegradation, and oxygen-assisted removal.</dd></div>
+            </dl>
+          </article>
+
+          <article class="card paper-card" data-paper="02">
+            <div class="paper-head">
+              <h3>Amplitude-dependent crude oil biodegradation in coastal sand columns under static, neap and spring water table forcing.</h3>
+              <span class="status-badge status-next">Ready for approval / planned submission</span>
+            </div>
+            <dl class="paper-meta">
+              <div><dt>Journal/status</dt><dd>Developed; planned submission to Advance Geo-energy Research upon approval</dd></div>
+              <div><dt>Thesis basis</dt><dd>Based on Chapters 5, 7 and 8</dd></div>
+              <div><dt>Focus</dt><dd>Sand-column design, static/neap/spring hydraulic forcing, abiotic correction, endpoint TPH profiles, and ADR-based interpretation.</dd></div>
+            </dl>
+          </article>
+
+          <article class="card paper-card" data-paper="03">
+            <div class="paper-head">
+              <h3>Evidence-class recovery emulator for petroleum hydrocarbon risk assessment in offshore asset-retirement settings</h3>
+              <span class="status-badge status-planned">Concept / to be developed</span>
+            </div>
+            <dl class="paper-meta">
+              <div><dt>Journal/status</dt><dd>To be confirmed and developed</dd></div>
+              <div><dt>Thesis basis</dt><dd>Based on Chapter 9</dd></div>
+              <div><dt>Focus</dt><dd>Field A recovery emulator, evidence classes, natural attenuation interpretation, scenario envelopes, and digital-twin response-module concept.</dd></div>
+            </dl>
+            <div aria-label="Evidence classes relevant to Paper 3">
+              <span class="evidence-badge">Measured evidence</span>
+              <span class="evidence-badge interpreted">Interpreted evidence</span>
+              <span class="evidence-badge scenario">Scenario projection</span>
+            </div>
+          </article>
+
+          <article class="card paper-card" data-paper="04">
+            <div class="paper-head">
+              <h3>Saturation-state controls on oil-microbe contact during crude-oil redistribution in microfluidic porous media</h3>
+              <span class="status-badge status-target">Collaborative paper planned</span>
+            </div>
+            <dl class="paper-meta">
+              <div><dt>Journal/status</dt><dd>Collaborative research paper with University of Leoben</dd></div>
+              <div><dt>Thesis basis</dt><dd>Based on Chapter 6</dd></div>
+              <div><dt>Focus</dt><dd>Microfluidic pore-scale visualisation of crude-oil biodegradation, phase redistribution, saturation-state effects, and oil&ndash;microbe contact.</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <section class="card pipeline" aria-label="Publication pipeline">
+          <h3>Publication Pipeline</h3>
+          <div class="pipeline-grid">
+            <div class="pipe-step" data-p="1">
+              <span>Chapters 3&ndash;4</span>
+              <strong>Paper 1</strong>
+              <small>Submitted</small>
+            </div>
+            <div class="pipe-step" data-p="2">
+              <span>Chapters 5, 7, 8</span>
+              <strong>Paper 2</strong>
+              <small>Approval / submission</small>
+            </div>
+            <div class="pipe-step" data-p="3">
+              <span>Chapter 9</span>
+              <strong>Paper 3</strong>
+              <small>To be developed</small>
+            </div>
+            <div class="pipe-step" data-p="4">
+              <span>Chapter 6</span>
+              <strong>Paper 4</strong>
+              <small>Leoben collaboration</small>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- ── Tab 3: Thesis Story ── -->
+      <section class="tab-panel" id="panel-story" role="tabpanel" aria-labelledby="tab-story" aria-hidden="true">
+        <div class="section-heading">
+          <span class="panel-kicker">Thesis narrative</span>
+          <h2>Thesis Story</h2>
+          <p>A supervisor-facing narrative of the thesis argument, chapter logic, novelty and evidence discipline.</p>
+        </div>
+
+        <section class="card story-block story-message">
+          <h3>What the thesis says</h3>
+          <p>The thesis argues that crude-oil biodegradation in coastal sands cannot be interpreted from microbial capability alone. Biological removal depends on whether oil, water, oxygen, nutrients and microbial cells occupy connected and accessible regions of the pore space. Therefore, laboratory biodegradation rates, pore-scale observations, column endpoints and field monitoring trends must be treated as different evidence classes rather than interchangeable measurements.</p>
+        </section>
+
+        <section class="card story-block story-problem">
+          <h3>Central scientific problem</h3>
+          <p>Hydrocarbon disappearance does not automatically equal biodegradation. It may also reflect evaporation, dissolution, redistribution, capillary trapping, physical loss, or model interpretation. The thesis therefore develops an evidence-based scale-transfer framework.</p>
+        </section>
+
+        <div class="strata-divider" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <section class="content-section" aria-labelledby="chapter-storyline-heading">
+          <h3 id="chapter-storyline-heading">Chapter Storyline</h3>
+          <div class="chapter-flow">
+            <article class="card chapter-card">
+              <h4>Chapter 2 &mdash; Scientific gap</h4>
+              <p>Crude oil biodegradation, coastal porous media, multiphase flow, monitoring and digital decision-support concepts.</p>
+            </article>
+            <article class="card chapter-card">
+              <h4>Chapter 3 &mdash; Oil, markers and strains</h4>
+              <p>Defines crude oil substrates, hydrocarbon markers and microbial strain basis, including reference strains and the local Newburgh isolate <em>Streptomyces</em> TM1.</p>
+              <button class="chapter-highlight-button" type="button" data-highlight-src="Chapter_3/highlight.pdf" data-highlight-title="Chapter 3 highlight: oil, markers and strains">View highlight</button>
+            </article>
+            <article class="card chapter-card">
+              <h4>Chapter 4 &mdash; Batch biodegradation</h4>
+              <p>Tests strain-specific biodegradation behaviour under controlled liquid-phase conditions and identifies oxygen availability as a major operational control.</p>
+              <button class="chapter-highlight-button" type="button" data-highlight-src="Chapter_4/highlight.pdf" data-highlight-title="Chapter 4 highlight: batch biodegradation">View highlight</button>
+            </article>
+            <article class="card chapter-card">
+              <h4>Chapter 5 &mdash; Sand-column platform</h4>
+              <p>Characterises Newburgh fine sand, pore architecture and capillary-active behaviour as the porous-media test bed.</p>
+              <button class="chapter-highlight-button" type="button" data-highlight-src="Chapter_5/highlight.pdf" data-highlight-title="Chapter 5 highlight: sand-column platform">View highlight</button>
+            </article>
+            <article class="card chapter-card">
+              <h4>Chapter 6 &mdash; Pore-scale visualisation</h4>
+              <p>Uses microfluidics to show how saturation state changes oil&ndash;microbe contact and phase redistribution.</p>
+              <button class="chapter-highlight-button" type="button" data-highlight-src="Chapter_6/highlight.pdf" data-highlight-title="Chapter 6 highlight: pore-scale visualisation">View highlight</button>
+            </article>
+            <article class="card chapter-card">
+              <h4>Chapter 7 &mdash; Sand-column biodegradation</h4>
+              <p>Tests static, neap and spring water-table forcing and evaluates physical loss, biological descriptors and depth-resolved TPH profiles.</p>
+              <button class="chapter-highlight-button" type="button" data-highlight-src="Chapter_7/highlight.pdf" data-highlight-title="Chapter 7 highlight: sand-column biodegradation">View highlight</button>
+            </article>
+            <article class="card chapter-card">
+              <h4>Chapter 8 &mdash; ADR modelling</h4>
+              <p>Interprets measured column endpoints using advection-dispersion-reaction modelling, rate-transfer checks and oxygen-demand constraints.</p>
+              <button class="chapter-highlight-button" type="button" data-highlight-src="Chapter_8/highlight.pdf" data-highlight-title="Chapter 8 highlight: ADR modelling">View highlight</button>
+            </article>
+            <article class="card chapter-card">
+              <h4>Chapter 9 &mdash; Field application</h4>
+              <p>Applies the evidence chain to a Field A recovery emulator for offshore asset-retirement interpretation, while separating measured evidence, interpreted evidence and scenario projection.</p>
+              <button class="chapter-highlight-button" type="button" data-highlight-src="Chapter_9/highlight.pdf" data-highlight-title="Chapter 9 highlight: Field A recovery emulator">View highlight</button>
+            </article>
+            <article class="card chapter-card">
+              <h4>Chapter 10 &mdash; Contribution and future work</h4>
+              <p>Summarises the research questions, main contributions, limitations and future evidence needed.</p>
+            </article>
+          </div>
+        </section>
+
+        <div class="strata-divider" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <section class="content-section" aria-labelledby="novelty-heading">
+          <h3 id="novelty-heading">Main novelties</h3>
+          <div class="novelty-grid">
+            <article class="card novelty-card">
+              <h4>Explicit multi-scale evidence chain</h4>
+              <p>The thesis links microbial capability, oil chemistry, pore-scale accessibility, sand-column transport limitation, ADR interpretation and field-scale response planning.</p>
+            </article>
+            <article class="card novelty-card">
+              <h4>Saturation state as a mechanistic control</h4>
+              <p>The work shows that saturation state affects not only apparent oil removal rate but also the mechanism of oil&ndash;microbe contact.</p>
+            </article>
+            <article class="card novelty-card">
+              <h4>Batch-to-column transfer constraint</h4>
+              <p>The thesis shows that batch biodegradation descriptors cannot be transferred directly to column-scale porous media without accounting for transport, oxygen delivery and accessibility.</p>
+            </article>
+            <article class="card novelty-card">
+              <h4>Newburgh fine sand as a coastal porous-media test bed</h4>
+              <p>The sand-column work links crude oil retention, capillary-held water, hydraulic forcing and biodegradation response in a coastal sand system.</p>
+            </article>
+            <article class="card novelty-card">
+              <h4>Local <em>Streptomyces</em> TM1 contribution</h4>
+              <p>The thesis identifies and uses <em>Streptomyces</em> TM1 as a locally isolated hydrocarbon-degrading actinobacterium from Newburgh coastal sediment.</p>
+            </article>
+          </div>
+          <p style="color: var(--text-muted); margin-top: 18px; font-size: 0.87rem;">Microbial references in the thesis include <em>Neptunomonas naphthovorans</em> NAG-2N-126, <em>Oleispira antarctica</em> RB-8T and <em>Streptomyces</em> TM1.</p>
+        </section>
+
+        <div class="strata-divider" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <section class="content-section" aria-labelledby="evidence-heading">
+          <h3 id="evidence-heading">Evidence discipline</h3>
+          <div class="evidence-row">
+            <article class="card evidence-tag">
+              <strong>Measured evidence</strong>
+              <p>Direct experimental or monitoring data.</p>
+            </article>
+            <article class="card evidence-tag">
+              <strong>Interpreted evidence</strong>
+              <p>Model-supported or corrected interpretation based on measured inputs.</p>
+            </article>
+            <article class="card evidence-tag">
+              <strong>Scenario projection</strong>
+              <p>Forward-looking planning output, not direct measurement.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="footer-inner">
+          <p class="footer-note">Prepared for supervisor discussion. Public-safe summary: no confidential field data, proprietary operator details, raw monitoring values or sensitive industry partner information are included.</p>
+          <div class="footer-strata" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">↑</button>
+
+  <div class="highlight-modal" id="highlight-modal" role="dialog" aria-modal="true" aria-labelledby="highlight-modal-title" aria-hidden="true">
+    <div class="highlight-modal__dialog" role="document">
+      <header class="highlight-modal__header">
+        <div>
+          <span class="highlight-modal__label">Chapter figure highlight</span>
+          <h2 id="highlight-modal-title">Highlight figure</h2>
+        </div>
+        <div class="highlight-modal__actions">
+          <a class="highlight-modal__link" id="highlight-open-link" href="#" target="_blank" rel="noopener">Open PDF</a>
+          <button class="highlight-modal__close" id="highlight-close" type="button" aria-label="Close chapter highlight">Close</button>
+        </div>
+      </header>
+      <iframe class="highlight-modal__frame" id="highlight-frame" title="Chapter highlight PDF"></iframe>
+      <p class="highlight-modal__fallback">If the embedded PDF viewer is unavailable, use the Open PDF link.</p>
+    </div>
+  </div>
+
+  <script>
+// ── Theme ────────────────────────────────────────────────────────────────────
+const themeToggle = document.getElementById('theme-toggle');
+const htmlEl = document.documentElement;
+
+function saveTheme(t) { try { localStorage.setItem('theme', t); } catch(e){} }
+function getSavedTheme() { try { return localStorage.getItem('theme'); } catch(e){ return null; } }
+function setTheme(theme, persist = true) {
+  htmlEl.setAttribute('data-theme', theme);
+  if (persist) saveTheme(theme);
+  themeToggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+}
+
+const saved = getSavedTheme();
+if (saved) { setTheme(saved, false); }
+else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) { setTheme('dark', false); }
+else { setTheme('light', false); }
+
+themeToggle.addEventListener('click', () => {
+  setTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+});
+
+// ── Tab indicator ────────────────────────────────────────────────────────────
+const tabIndicator = document.getElementById('tab-indicator');
+
+function updateIndicator(tab) {
+  if (!tabIndicator || !tab) return;
+  tabIndicator.style.left  = tab.offsetLeft + 'px';
+  tabIndicator.style.width = tab.offsetWidth + 'px';
+}
+
+// ── Tabs ─────────────────────────────────────────────────────────────────────
+const tabButtons = Array.from(document.querySelectorAll('[role="tab"]'));
+const tabPanels  = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+
+function activateTab(tab, focus = true) {
+  tabButtons.forEach(b => {
+    const sel = b === tab;
+    b.setAttribute('aria-selected', String(sel));
+    b.setAttribute('tabindex', sel ? '0' : '-1');
+  });
+  tabPanels.forEach(p => {
+    const active = p.id === tab.getAttribute('aria-controls');
+    p.classList.toggle('is-active', active);
+    p.setAttribute('aria-hidden', String(!active));
+  });
+  updateIndicator(tab);
+
+  // Force-reveal any cards in this panel that the observer couldn't reach
+  // (IntersectionObserver doesn't fire on display:none elements)
+  const panel = document.getElementById(tab.getAttribute('aria-controls'));
+  if (panel) {
+    panel.querySelectorAll('.reveal:not(.active)').forEach((el, i) => {
+      setTimeout(() => el.classList.add('active'), i * 35);
+    });
+  }
+
+  if (focus) tab.focus();
+}
+
+function moveTab(cur, dir) {
+  const i = tabButtons.indexOf(cur);
+  activateTab(tabButtons[(i + dir + tabButtons.length) % tabButtons.length]);
+}
+
+tabButtons.forEach(b => {
+  b.addEventListener('click', () => activateTab(b, false));
+  b.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown')  { e.preventDefault(); moveTab(b,  1); }
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')    { e.preventDefault(); moveTab(b, -1); }
+    if (e.key === 'Home') { e.preventDefault(); activateTab(tabButtons[0]); }
+    if (e.key === 'End')  { e.preventDefault(); activateTab(tabButtons[tabButtons.length-1]); }
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activateTab(b); }
+  });
+});
+
+// Initialise
+if (tabButtons.length) {
+  activateTab(tabButtons[0], false);
+  // Defer indicator init until layout is painted
+  requestAnimationFrame(() => updateIndicator(tabButtons[0]));
+}
+
+// Re-position indicator on resize
+window.addEventListener('resize', () => {
+  const activeTab = tabButtons.find(b => b.getAttribute('aria-selected') === 'true');
+  updateIndicator(activeTab);
+}, { passive: true });
+
+// ── Scroll reveal (fixed) ────────────────────────────────────────────────────
+const revealEls = document.querySelectorAll('.card, .evidence-tag, .pipe-step');
+revealEls.forEach(el => el.classList.add('reveal'));
+
+const revealObs = new IntersectionObserver((entries, obs) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('active');
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+revealEls.forEach(el => revealObs.observe(el));
+
+// ── Back to top ──────────────────────────────────────────────────────────────
+const btt = document.querySelector('.back-to-top');
+window.addEventListener('scroll', () => {
+  btt.classList.toggle('is-visible', window.scrollY > 400);
+}, { passive: true });
+btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ── Chapter highlight PDF modal ─────────────────────────────────────────────
+const highlightModal = document.getElementById('highlight-modal');
+const highlightFrame = document.getElementById('highlight-frame');
+const highlightTitle = document.getElementById('highlight-modal-title');
+const highlightOpenLink = document.getElementById('highlight-open-link');
+const highlightClose = document.getElementById('highlight-close');
+const highlightTriggers = Array.from(document.querySelectorAll('.chapter-highlight-button'));
+let lastHighlightTrigger = null;
+
+function openHighlight(trigger) {
+  if (!highlightModal || !highlightFrame || !highlightTitle || !highlightOpenLink) return;
+  const src = trigger.getAttribute('data-highlight-src');
+  const title = trigger.getAttribute('data-highlight-title') || 'Chapter highlight figure';
+  if (!src) return;
+
+  lastHighlightTrigger = trigger;
+  highlightTitle.textContent = title;
+  highlightFrame.src = src + '#view=FitH';
+  highlightFrame.title = title;
+  highlightOpenLink.href = src;
+  highlightModal.classList.add('is-open');
+  highlightModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+  highlightClose?.focus();
+}
+
+function closeHighlight() {
+  if (!highlightModal || !highlightFrame) return;
+  highlightModal.classList.remove('is-open');
+  highlightModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+  highlightFrame.removeAttribute('src');
+
+  if (lastHighlightTrigger) {
+    lastHighlightTrigger.focus();
+    lastHighlightTrigger = null;
+  }
+}
+
+highlightTriggers.forEach(trigger => {
+  trigger.addEventListener('click', () => openHighlight(trigger));
+});
+highlightClose?.addEventListener('click', closeHighlight);
+highlightModal?.addEventListener('click', event => {
+  if (event.target === highlightModal) closeHighlight();
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && highlightModal?.classList.contains('is-open')) {
+    closeHighlight();
+  }
+});
+
+// ── Particle canvas ──────────────────────────────────────────────────────────
+const canvas  = document.getElementById('bg-canvas');
+const ctx     = canvas ? canvas.getContext('2d') : null;
+const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let particles = [], resT;
+
+function resize() { if (!canvas) return; canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+window.addEventListener('resize', () => { clearTimeout(resT); resT = setTimeout(resize, 120); }, { passive: true });
+
+class Particle {
+  constructor() { this.reset(); }
+  reset() {
+    this.x  = Math.random() * canvas.width;
+    this.y  = Math.random() * canvas.height;
+    this.vx = (Math.random() - 0.5) * 0.36;
+    this.vy = (Math.random() - 0.5) * 0.36;
+    this.r  = Math.random() * 1.3 + 0.2;
+  }
+  update() {
+    this.x += this.vx; this.y += this.vy;
+    if (this.x < 0 || this.x > canvas.width)  this.vx *= -1;
+    if (this.y < 0 || this.y > canvas.height)  this.vy *= -1;
+  }
+  draw() {
+    const dark = htmlEl.getAttribute('data-theme') === 'dark';
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+    ctx.fillStyle = dark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.06)';
+    ctx.fill();
+  }
+}
+
+function animate() {
+  if (!ctx) return;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => { p.update(); p.draw(); });
+  requestAnimationFrame(animate);
+}
+
+if (canvas && ctx && !reduceMotion) {
+  resize();
+  for (let i = 0; i < 20; i++) particles.push(new Particle());
+  animate();
+}
+  </script>
+</body>
+</html>
