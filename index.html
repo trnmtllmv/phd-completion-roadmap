@@ -196,7 +196,7 @@ h1, h2, h3, h4 {
   position: absolute;
   left: 0;
   top: 150px;
-  width: clamp(92px, 12vw, 156px);
+  width: clamp(92px, 9.5vw, 140px);
   height: 66px;
   background: var(--abdn-blue);
   pointer-events: none;
@@ -1084,6 +1084,17 @@ footer {
 /* ─── Responsive ────────────────────────────────────────────────────────────── */
 @media (max-width: 1040px) {
   .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero {
+    background: linear-gradient(180deg, var(--card-bg) 0%, var(--bg-canvas) 100%);
+  }
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+  .hero-main {
+    padding-left: 0;
+    max-width: none;
+  }
   .control-panel { grid-template-columns: 1fr 1fr; }
   .timeline { grid-template-columns: 1fr 1fr; }
   .timeline::before { display: none; }
@@ -1095,10 +1106,18 @@ footer {
   .chapter-flow  { grid-template-columns: 1fr 1fr; }
 }
 
+@media (min-width: 1041px) and (max-width: 1320px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 42px;
+  }
+  .hero-main {
+    padding-left: 124px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero { padding: 64px 0 44px; }
-  .hero::before,
-  .hero::after { display: none; }
   .hero h1 { font-size: 1.85rem; }
   .control-panel { display: none; }
   .mobile-chain, .mobile-privacy { display: block; }
